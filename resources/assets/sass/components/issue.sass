@@ -1,0 +1,165 @@
+// ISSUE TYPE DROPDOWN
+.issue-type
+  .dropdown-menu
+    li
+      padding: 3px 10px
+      cursor: pointer
+      margin-bottom: 2px
+
+      &:focus,
+      &:active,
+      &:hover
+        background-color: #d4d4d4
+
+// ISSUE TYPE COLOR
+span.icon
+  padding: 2px
+  margin-right: 10px
+  i
+    font-size: 13px
+    color: #fff
+
+  &.story
+    background-color: #63ba3c
+  &.epic
+    background-color: #904ee2
+  &.bug
+    background-color: #e5493a
+  &.task
+    background-color: #4bade8
+  &.sub-task
+    background-color: #41515a
+
+// ISSUE CREATE WIDGET
+.issue-create
+  position: relative
+  .issue-widget
+    -moz-box-sizing: border-box
+    -webkit-box-sizing: border-box
+    -ms-box-sizing: border-box
+    box-sizing: border-box
+    min-width: 400px
+    width: 100%
+    padding: 5px
+    background: #ffffff
+    border: solid 1px transparent
+    transition-duration: 0, 125ms
+    transition-property: display, opacity
+    transition-delay: 0
+
+    .issue-type
+      -moz-box-sizing: border-box
+      -webkit-box-sizing: border-box
+      -ms-box-sizing: border-box
+      box-sizing: border-box
+      position: absolute
+      z-index: 10
+      top: 7px
+      left: -5px
+      bottom: -5px
+      right: 0
+      width: 45px
+
+    .issue-form-area
+      padding-left: 50px
+
+      .dropdown,
+      .dropup
+        display: inline
+
+// ISSUE ITEM
+.sprint-issue-container
+  margin-bottom: 20px
+
+.issue-item
+  padding: 8px 8px 8px 10px
+  border: 1px solid #ddd
+  border-bottom: none
+  cursor: move
+  white-space: nowrap
+  overflow: hidden
+  position: relative
+
+  &:last-child
+    border-bottom: 1px solid #ddd
+
+  .issue-type,
+  .issue-summary
+    display: inline
+
+  .issue-type
+    width: 15px
+
+  .issue-summary
+    // overflow: hidden
+    // max-width: 100%
+
+// ISSUE SHOW
+.issue-show
+  position: relative
+  .issue-show-tools
+    -webkit-box-sizing: border-box
+    -ms-box-sizing: border-box
+    box-sizing: border-box
+    // background-color: #fafbfc
+    // border-right-color: #dedede
+    // border-right-width: 1px
+    // border-right-style: solid
+    position: absolute
+    z-index: 10
+    top: 0px
+    left: -5px
+    bottom: -5px
+    right: 0
+    width: 45px
+    &:before
+      background-color: #fafbfc
+      border-right-color: #dedede
+      border-right-width: 1px
+      border-right-style: solid
+      bottom: 0
+      content: ' '
+      left: 0
+      top: 0
+      position: absolute
+      z-index: 10
+      -webkit-box-sizing: inherit
+      box-sizing: inherit
+      width: 45px
+  .issue-show-container
+    margin-left: 40px
+    position: relative !important
+    padding: 10px 10px 50px
+    .issue-section
+      margin-bottom: 30px
+      h5
+        padding-bottom: 5px
+        border-bottom: 1px solid #ddd
+
+    .issue-title
+      font-size: 18px
+
+    .issue-detail-list
+      .name
+        -moz-box-sizing: border-box
+        -webkit-box-sizing: border-box
+        -ms-box-sizing: border-box
+        box-sizing: border-box
+        word-wrap: break-word
+        word-break: break-word
+        color: #707070
+        display: inline-block
+        font-weight: normal
+        padding: 2px 5px 2px 0
+        padding-right: 5px
+        width: 150px
+      .value
+        word-wrap: break-word
+        word-break: break-word
+        display: inline-block
+        max-width: 100%
+        padding-bottom: 2px
+        padding-left: 5px
+        padding-top: 2px
+        position: relative
+        vertical-align: top

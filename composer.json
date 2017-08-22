@@ -1,0 +1,49 @@
+{
+    "name": "story/tasking",
+    "description": "",
+    "keywords": [
+        "laravel", "agile", "workflow", "tasking", "kanban"
+    ],
+    "license": "MIT",
+    "authors": [
+        { "name": "Purwandi", "email": "purwandi@froyo.co.id" }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "illuminate/contracts": "~5.4",
+        "illuminate/queue": "~5.4",
+        "illuminate/support": "~5.4",
+        "creativeorange/gravatar": "~1.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "~0.9",
+        "orchestra/database": "~3.5",
+        "orchestra/testbench": "~3.5",
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Story\\Tasking\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Story\\Tasking\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Story\\Tasking\\TaskingServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}
