@@ -22,9 +22,7 @@ const actions = {
   },
 
   createProject ({ commit, state }, data) {
-    api.createProject(data, response => {
-      commit(types.RECEIVE_PROJECT, response.data.data)
-    })
+    commit(types.RECEIVE_PROJECT, data)
   },
 
   fetchProjectById ({ commit }, id) {
@@ -40,7 +38,7 @@ const actions = {
 
 const mutations = {
   [types.RECEIVE_PROJECT] (state, project) {
-    if (state.all.length === 0 || project.length !== 1) {
+    if (state.all.length === 0) {
       state.all = project
     } else {
       state.all.push(project)

@@ -1,13 +1,14 @@
 <template lang="pug">
   .project.container-fluid
+    .pull-right
+      project-create
     h1 Project
 
     ul
-      li(v-for="project in projects" v-if="project.slug")
-        .project-item(href="" @click="toProject(project)")
-          span.title {{ project.name }}
-          span.summary {{ project.description }}
-          span.stats
+      li.project-item(v-for="project in projects"  @click="toProject(project)")
+        span.title {{ project.name }}
+        span.summary {{ project.description }}
+        span.stats
 
 </template>
 
@@ -53,12 +54,15 @@ export default {
     &:hover
       background-color: rgba(222,222,222,0.2)
     span.title
-      font-size: 18px
       width: 300px
       color: rgba(0,0,0,0.8)
       display: inline-block
     span.summary
-      font-size: 13px
       color: rgba(0,0,0,0.44)
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
+      max-width: 40%
+      display: inline-block
 </style>
 

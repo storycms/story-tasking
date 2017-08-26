@@ -26,7 +26,37 @@ class ProjectRepository implements ProjectRepositoryInterface
 
         $user->project()->attach($project, ['type' => 'owner']);
 
-        return $this->getProject($user, $project->slug);
+        return $project->fresh('user');
+    }
+
+    /**
+     * Update current project with the data
+     *
+     * @param  Project $project
+     * @param  array  $data
+     * @return
+     */
+    public function update(Project $project, $data)
+    {
+        $project->name = $data['data'];
+        $project->slug = $data['slug'];
+        $project->description = $data['description'];
+
+        if ($project->save()) {
+            return $project->fresh('user');
+        }
+        return false;
+    }
+
+    /**
+     * Destroy project by given ID
+     *
+     * @param  Project $project
+     * @return bool
+     */
+    public function destroy(Project $project)
+    {
+        return $project->delete();
     }
 
     /**
